@@ -138,6 +138,21 @@ button {
 }
 
 
+
+.location-form {
+	margin: 40px 0;
+
+	.location-input {
+		width: 100%;
+		background-color: $color-background;
+		border: none;
+		padding: 10px;
+		@include boxShadow();
+	}
+}
+
+
+
 .weather {
 	background-color: darken($color-background, 2);
 	text-align: center;

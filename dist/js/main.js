@@ -8,9 +8,12 @@
 		return {
 			restrict: 'E',
 			templateUrl: "partials/current-weather.html",
+			scope: {
+				location: '@'
+			},
 			link: function link(vm, element, attrs) {
 				// Get current weather data from API
-				var weatherCall = FApi.getCurrentWeather(attrs.city);
+				var weatherCall = FApi.getCurrentWeather(attrs.location);
 
 				// After API returns...
 				weatherCall.then(function (weatherData) {
@@ -26,9 +29,12 @@
 		return {
 			restrict: 'E',
 			templateUrl: "partials/forecast-weather.html",
+			scope: {
+				location: '@'
+			},
 			link: function link(vm, element, attrs) {
 				// Get forecast weather data from API
-				var weatherCall = FApi.getForecastWeather(attrs.city);
+				var weatherCall = FApi.getForecastWeather(attrs.location);
 
 				// After API returns...
 				weatherCall.then(function (weatherData) {
@@ -52,6 +58,11 @@
 		$stateProvider.state('home', {
 			url: '/',
 			templateUrl: 'partials/home.html',
+			controller: 'CWeather',
+			controllerAs: 'weather'
+		}).state('weather', {
+			url: '/weather/:location',
+			templateUrl: 'partials/weather.html',
 			controller: 'CWeather',
 			controllerAs: 'weather'
 		});

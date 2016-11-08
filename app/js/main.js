@@ -9,14 +9,17 @@
 		return {
 			restrict: 'E',
 			templateUrl:"partials/current-weather.html",
+			scope: {
+	            location: '@'
+	        },
 			link: function (vm, element, attrs)
 			{
 				// Get current weather data from API
-				let weatherCall = FApi.getCurrentWeather(attrs.city);
+				let weatherCall = FApi.getCurrentWeather(attrs.location);
 
 				// After API returns...
 				weatherCall.then(function(weatherData)
-				{	
+				{
 					// Focus on needed data
 					vm.weather = weatherData.data;
 
@@ -34,10 +37,13 @@
 		return {
 		    restrict: 'E',
 		    templateUrl:"partials/forecast-weather.html",
+			scope: {
+	            location: '@'
+	        },
 		    link: function (vm, element, attrs)
 			{
 				// Get forecast weather data from API
-				let weatherCall = FApi.getForecastWeather(attrs.city);
+				let weatherCall = FApi.getForecastWeather(attrs.location);
 
 				// After API returns...
 				weatherCall.then(function(weatherData)
@@ -72,6 +78,13 @@
 		{
 			url: 			'/',
 			templateUrl: 	'partials/home.html',
+			controller: 	'CWeather',
+	        controllerAs: 	'weather'
+	    })
+		.state('weather',
+		{
+			url: 			'/weather/:location',
+			templateUrl: 	'partials/weather.html',
 			controller: 	'CWeather',
 	        controllerAs: 	'weather'
 	    })

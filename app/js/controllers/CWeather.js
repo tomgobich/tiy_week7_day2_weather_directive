@@ -11,6 +11,8 @@
 			// Get location from stateParams
 			vm.location = $stateParams.location;
 
+			
+
 		})
 
 })();
