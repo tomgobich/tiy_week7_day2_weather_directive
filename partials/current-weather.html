@@ -1,0 +1,12 @@
+<div class="col-xs-12">
+	<h2 class="page-title">Weather for {{ weather.name }}</h2>
+</div>
+<div class="current-weather">
+	<div class="col-sm-8 offset-sm-2 icon-wrap">
+		<div class="block">
+			<img class="condition-icon" ng-src="images/{{ conditionIcon }}">
+			<h2 class="temperature">{{ weather.main.temp | number:0 }}&deg;</h2>
+			<h3 class="condition">{{ weather.weather[0].main }}</h3>
+		</div>
+	</div>
+</div>

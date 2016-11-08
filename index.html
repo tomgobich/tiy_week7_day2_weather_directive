@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OnlineShop</title>
+
+	<!-- Bootstrap Styles -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+	<!-- Site Styles -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Font(s) -->
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Muli" rel="stylesheet">
+
+</head>
+<body ng-controller="CWeather as weather" ng-cloak>
+
+	<!--
+		Main Body Container
+	-->
+	<div class="container weather">
+		<div class="row">
+			<main ui-view></main>
+		</div>
+	</div>
+
+
+
+	<!-- Angular 1.5.8 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
+	<!-- UI Router -->
+	<script src="http://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<!-- Main JavaScript File -->
+	<script src="js/main.js"></script>
+	<script src="js/factories/FApi.js"></script>
+	<script src="js/factories/FLocalStorage.js"></script>
+	<script src="js/factories/FWeather.js"></script>
+	<script src="js/controllers/CWeather.js"></script>
+
+</body>
+</html>

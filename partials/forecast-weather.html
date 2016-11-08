@@ -1,0 +1,10 @@
+<div class="forecast-weather">
+	<div class="col-sm-8 offset-sm-2 forecast-wrap">
+		<div class="block" ng-repeat="day in weatherForecast">
+			<h3 class="day">{{ day.dt * 1000 | date: 'EEEE'}}: </h3>
+			<img class="condition-icon" ng-src="images/{{ getIconFilename(day.weather[0].icon) }}">
+			<h3 class="temperature">{{ day.temp.day | number:0 }}&deg;</h3>
+			<h3 class="condition">{{ day.weather[0].description }}</h3>
+		</div>
+	</div>
+</div>
