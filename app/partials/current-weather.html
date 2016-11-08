@@ -6,7 +6,7 @@
 		<div class="block">
 			<img class="condition-icon" ng-src="images/{{ conditionIcon }}">
 			<h2 class="temperature">{{ weather.main.temp | number:0 }}&deg;</h2>
-			<h3 class="condition">{{ weather.weather[0].main }}</h3>
+			<h3 class="condition">{{ weather.weather[0].description }}</h3>
 		</div>
 	</div>
 </div>

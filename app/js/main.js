@@ -16,7 +16,7 @@
 
 				// After API returns...
 				weatherCall.then(function(weatherData)
-				{
+				{	
 					// Focus on needed data
 					vm.weather = weatherData.data;
 
