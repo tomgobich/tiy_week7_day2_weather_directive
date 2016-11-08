@@ -1,5 +1,9 @@
-<!-- Current Weather -->
-<current-weather city="Cincinnati"></current-weather>
-
-<!-- Forecast Weather -->
-<forecast-weather city="Cincinnati"></forecast-weather>
+<div class="col-xs-12">
+	<h2 class="page-title">Enter A City Below</h2>
+</div>
+<div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3">
+	<form class="location-form" novalidate>
+		<input type="text" class="location-input" ng-model="weather.location" placeholder="Cincinnati">
+		<button type="submit" class="btn" ui-sref="weather({location: weather.location})">Get Weather</button>
+	</form>
+</div>
