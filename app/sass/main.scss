@@ -1,0 +1,226 @@
+
+* {margin: 0; padding: 0;}
+
+
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+$color-background: 	   	#f4f4f4;
+$color-alt-background: 	#434A54;
+$color-border:			#DDD;
+$color-primary:        	#8CC152;
+$color-alt:            	#7DB1B1;
+$color-text:           	#333;
+$color-text-light:     	#767676;
+$color-error: 			#BF263C;
+
+$border-radius-small: 3px;
+$border-radius-large: 6px;
+
+$font-logo: 'Courgette', cursive;
+$font-body: 'Muli', sans-serif;
+
+$checkbox-size: 26px;
+
+
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+@mixin clearAfter() {
+	content:"";
+    display:table;
+    clear:both;
+}
+
+@mixin displayInlineBlock() {
+	display: inline-block;
+	vertical-align: top;
+}
+
+@mixin boxShadow() {
+	box-shadow: 1px 1px 3px rgba($color-alt-background, .1);
+}
+
+@mixin borderRadius($border-radius) {
+	-webkit-border-radiu: $border-radius;
+	  -moz-border-radius: $border-radius;
+		   border-radius: $border-radius;
+}
+
+@mixin transitionAnimation() {
+	transition: all .25s ease;
+}
+
+
+
+// --------------------------------------------------
+// Global Styles
+// --------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-size: 16px;
+	font-family: $font-body;
+    background-color: $color-background;
+	color: $color-text;
+	line-height: 1.6em;
+}
+
+a {
+	color: $color-alt;
+	@include transitionAnimation();
+
+	&:hover {
+		color: darken($color-alt, 20);
+	}
+
+	&.content {
+		color: $color-text;
+
+		&:hover {
+			text-decoration: none;
+
+			h3 {
+				color: darken($color-alt, 20);
+			}
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+input {
+	outline: none;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.title-underline {
+	width: 60px;
+	height: 1px;
+	background-color: rgba($color-text, .6);
+	margin: 10px 0 20px;
+}
+
+
+
+form {
+	input {
+		&.ng-dirty {
+			&.ng-invalid {
+				border: 1px solid $color-error;
+			}
+		}
+	}
+}
+
+button {
+	min-width: 40%;
+	background-color: $color-primary;
+	color: $color-background;
+	padding: 10px;
+	border: none;
+	margin-top: 30px;
+	@include boxShadow();
+}
+
+
+.weather {
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+
+.icon-wrap,
+.forecast-wrap {
+	border: 4px solid $color-alt;
+	background-color: rgba($color-alt, .2);
+}
+
+.icon-wrap {
+	border-bottom: 2px solid $color-alt;
+}
+
+.forecast-wrap {
+	border-top: 2px solid $color-alt;
+}
+
+.icon-wrap {
+
+	.block {
+		padding: 40px 0;
+
+		.temperature {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		.condition {
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.condition-icon {
+			width: 30%;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.forecast-wrap {
+	margin-bottom: 60px;
+
+	.block {
+		width: auto;
+		display: block;
+		margin: 0 auto;
+		padding: 14px 0;
+
+		&:after {
+			@include clearAfter();
+		}
+
+		.day,
+		.temperature {
+			font-size: 20px;
+			padding-right: 60px;
+			float: left;
+			margin: 0;
+		}
+
+		.day {
+			width: 32%;
+			text-align: left;
+			padding-right: 60px;
+			text-transform: uppercase;
+		}
+
+		.condition {
+			font-size: 20px;
+			text-transform: uppercase;
+			float: left;
+			margin: 0;
+		}
+
+		.condition-icon {
+			width: 20px;
+			margin-right: 60px;
+			float: left;
+		}
+	}
+}
