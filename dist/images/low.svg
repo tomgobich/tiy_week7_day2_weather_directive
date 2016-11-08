@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="305px" height="487px" viewBox="0 0 305 487" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-    <title>download</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="download" fill="#5D9CEC">
-            <path d="M301.031,143 L162.031,4 C159.531,1.5 156.031,-1.70530257e-13 152.531,-1.70530257e-13 C148.931,-1.70530257e-13 145.531,1.4 143.031,4 L4.031,143 C-1.269,148.3 -1.269,156.8 4.031,162.1 C9.331,167.4 17.831,167.4 23.131,162.1 L139.131,46.1 L139.131,473.5 C139.131,481 145.131,487 152.631,487 C160.131,487 166.131,481 166.131,473.5 L166.131,46.1 L282.131,162.1 C284.731,164.7 288.231,166.1 291.631,166.1 C295.031,166.1 298.531,164.8 301.131,162.1 C306.231,156.8 306.231,148.2 301.031,143 L301.031,143 Z" id="Shape" transform="translate(152.499796, 243.500000) rotate(-180.000000) translate(-152.499796, -243.500000) "></path>
-        </g>
-    </g>
-</svg>
+<svg width="305" height="487" viewBox="0 0 305 487" xmlns="http://www.w3.org/2000/svg"><title>download</title><path d="M3.969 344l139 139c2.5 2.5 6 4 9.5 4 3.6 0 7-1.4 9.5-4l139-139c5.3-5.3 5.3-13.8 0-19.1-5.3-5.3-13.8-5.3-19.1 0l-116 116V13.5c0-7.5-6-13.5-13.5-13.5s-13.5 6-13.5 13.5v427.4l-116-116c-2.6-2.6-6.1-4-9.5-4-3.4 0-6.9 1.3-9.5 4-5.1 5.3-5.1 13.9.1 19.1z" fill="#5D9CEC" fill-rule="evenodd"/></svg>

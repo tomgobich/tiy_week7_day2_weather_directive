@@ -139,88 +139,79 @@ button {
 
 
 .weather {
+	background-color: darken($color-background, 2);
 	text-align: center;
 	margin-top: 40px;
-}
+	@include boxShadow();
 
+	.page-title {
+		padding: 40px 0 20px;
+		border-bottom: 1px solid darken($color-background, 6);
+	}
 
+	.icon-wrap {
 
-.icon-wrap,
-.forecast-wrap {
-	border: 4px solid $color-alt;
-	background-color: rgba($color-alt, .2);
-}
+		.block {
+			padding: 40px 0;
 
-.icon-wrap {
-	border-bottom: 2px solid $color-alt;
-}
+			.temperature {
+				font-size: 2em;
+				font-weight: bold;
+			}
 
-.forecast-wrap {
-	border-top: 2px solid $color-alt;
-}
+			.condition {
+				text-transform: uppercase;
+				font-weight: bold;
+				margin: 0;
+			}
 
-.icon-wrap {
-
-	.block {
-		padding: 40px 0;
-
-		.temperature {
-			font-size: 2em;
-			font-weight: bold;
-		}
-
-		.condition {
-			text-transform: uppercase;
-			font-weight: bold;
-			margin: 0;
-		}
-
-		.condition-icon {
-			width: 30%;
-			padding-bottom: 20px;
+			.condition-icon {
+				width: 30%;
+				padding-bottom: 20px;
+			}
 		}
 	}
-}
 
-.forecast-wrap {
-	margin-bottom: 60px;
+	.forecast-wrap {
+		margin-bottom: 60px;
 
-	.block {
-		width: auto;
-		display: block;
-		margin: 0 auto;
-		padding: 14px 0;
+		.block {
+			width: auto;
+			display: block;
+			margin: 0 auto;
+			padding: 40px 0 0;
 
-		&:after {
-			@include clearAfter();
-		}
+			&:after {
+				@include clearAfter();
+			}
 
-		.day,
-		.temperature {
-			font-size: 20px;
-			padding-right: 60px;
-			float: left;
-			margin: 0;
-		}
+			.day,
+			.temperature {
+				font-size: 20px;
+				padding-right: 60px;
+				float: left;
+				margin: 0;
+			}
 
-		.day {
-			width: 32%;
-			text-align: left;
-			padding-right: 60px;
-			text-transform: uppercase;
-		}
+			.day {
+				width: 32%;
+				text-align: left;
+				padding-right: 60px;
+				text-transform: uppercase;
+			}
 
-		.condition {
-			font-size: 20px;
-			text-transform: uppercase;
-			float: left;
-			margin: 0;
-		}
+			.condition {
+				font-size: 20px;
+				text-transform: uppercase;
+				float: left;
+				margin: 0;
+			}
 
-		.condition-icon {
-			width: 20px;
-			margin-right: 60px;
-			float: left;
+			.condition-icon {
+				width: 20px;
+				margin-right: 60px;
+				float: left;
+			}
 		}
 	}
 }
